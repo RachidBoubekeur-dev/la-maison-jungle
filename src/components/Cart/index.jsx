@@ -1,10 +1,13 @@
 import './index.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Cart = ({ cart, updateCart }) => {
     const monsteraPrice = 8;
     const [isOpen, setIsOpen] = useState(false);
 
+    useEffect(() => {
+        document.title = `LMJ: ${monsteraPrice * cart} € d'achats`;
+    }, [cart]);
     return isOpen ? (
         <div className='lmj-cart'>
             <button
