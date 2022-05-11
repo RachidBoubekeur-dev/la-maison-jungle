@@ -1,9 +1,8 @@
 import './index.css';
 import { useState } from 'react';
 
-const Cart = () => {
+const Cart = ({ cart, updateCart }) => {
     const monsteraPrice = 8;
-    const [cart, updateCart] = useState(1);
     const [isOpen, setIsOpen] = useState(false);
 
     return isOpen ? (
